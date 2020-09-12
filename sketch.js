@@ -37,7 +37,7 @@ paper.display();
 ground.display();
 
   
-  drawSprites();
+ 
  
 }
 
