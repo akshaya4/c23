@@ -3,9 +3,9 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
-
+const Render = Matter.Render;
 var paper, ground;
-var dustbinObj,world;
+var dustbin,world;
 
 function setup() {
 	createCanvas(800, 700);
@@ -16,7 +16,7 @@ function setup() {
 
 	//Create the Bodies Here.
 	paper = new Paper(200,200,20)
-	dustbinObj=new dustbin(1200,650);
+	dustbin=new Dustbin(1200,650);
 	ground = new Ground(400, 600, 800, 10);
 	
 	var render = Render.create({
@@ -39,7 +39,7 @@ function draw() {
   rectMode(CENTER);
 	background(0);
 
-dustbinObj.display();
+dustbin.display();
 paper.display();
 ground.display();
 
